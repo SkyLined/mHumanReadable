@@ -1,0 +1,16 @@
+{
+  "asDependentOnProductNames": [], 
+  "asOptionalProductNames": [], 
+  "oProductVersion": "2020-08-12 11:49", 
+  "oRepository": {
+    "sBranch": "master", 
+    "sRepositoryName": "fsBytesToHumanReadableString", 
+    "sType": "GitHub", 
+    "sUserName": "SkyLined"
+  }, 
+  "oTrialPeriodDuration": null, 
+  "sLicenseServerURL": null, 
+  "sProductAuthor": "SkyLined", 
+  "sProductName": "fsBytesToHumanReadableString", 
+  "sProductURL": "https://github.com/SkyLined/fsBytesToHumanReadableString"
+}
