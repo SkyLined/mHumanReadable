@@ -1,9 +1,9 @@
 import math;
 
-gsUnits = ["?kMGTPEZY"];
+gsUnits = "?kMGTPEZY";
 def fsBytesToHumanReadableString(uBytes):
   uMagnitude = int(math.log(max(1, uBytes), 1000));
-  sUnit = gasUnits[uMagnitude] + "B" if uMagnitude else "byte%s" % ("s" if uBytes != 1 else "");
+  sUnit = gsUnits[uMagnitude] + "B" if uMagnitude else "byte%s" % ("s" if uBytes != 1 else "");
   nUnits = float(uBytes) / (1000 ** uMagnitude);
   if uBytes < 1000:
     uFloatingPointDigits = 0;
