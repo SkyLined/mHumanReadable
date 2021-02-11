@@ -1,4 +1,6 @@
 {
+  "asProductTypes": ["Python module"],
+  "sPythonModuleName": "fsBytesToHumanReadableString",
   "asDependentOnProductNames": [], 
   "asOptionalProductNames": [], 
   "oProductVersion": "2020-08-12 11:49", 
