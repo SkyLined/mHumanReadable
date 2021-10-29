@@ -1,10 +1,10 @@
 {
   "a0sDebugAdditionalProductNames": [
-    "mFileSystemItem",
+    "mConsole",
     "mDebugOutput",
+    "mFileSystemItem",
     "mNotProvided",
-    "mWindowsSDK",
-    "mConsole"
+    "mWindowsSDK"
   ],
   "asProductTypes": [
     "Python module"
@@ -16,7 +16,7 @@
     "sbRepositoryName": "mHumanReadable",
     "sbUserName": "SkyLined"
   },
-  "oProductVersion": "2021-07-07 12:48",
+  "oProductVersion": "2021-10-29 09:07",
   "s0PythonModuleName": "mHumanReadable",
   "sProductAuthor": "SkyLined",
   "sProductName": "mHumanReadable",
