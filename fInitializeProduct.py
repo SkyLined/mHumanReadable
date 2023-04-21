@@ -16,19 +16,19 @@
       os.path.join(sProductFolderPath, "modules"),
     ]
     sys.path = asModulesPaths + [sPath for sPath in sys.path if sPath not in asModulesPaths];
-    if bDebugOutput:
-      from foConsoleLoader import foConsoleLoader;
-      oConsole = foConsoleLoader();
-
-      from mExitCodes import guExitCodeInternalError, guExitCodeBadDependencyError;
-      from mColorsAndChars import \
-          COLOR_BUSY, CHAR_BUSY, \
-          COLOR_ERROR, CHAR_ERROR, \
-          COLOR_INFO, CHAR_INFO, \
-          COLOR_LIST, CHAR_LIST, \
-          COLOR_OK, CHAR_OK, \
-          COLOR_WARNING, CHAR_WARNING, \
-          COLOR_HILITE, COLOR_NORMAL;
+  from foConsoleLoader import foConsoleLoader;
+  oConsole = foConsoleLoader();
+  if bDebugOutput:
+    from mExitCodes import guExitCodeInternalError, guExitCodeBadDependencyError;
+    from mColorsAndChars import \
+        COLOR_BUSY, CHAR_BUSY, \
+        COLOR_ERROR, CHAR_ERROR, \
+        COLOR_INFO, CHAR_INFO, \
+        COLOR_LIST, CHAR_LIST, \
+        COLOR_OK, CHAR_OK, \
+        COLOR_WARNING, CHAR_WARNING, \
+        COLOR_HILITE, COLOR_NORMAL;
+    if bProductIsAnApplication:
       oConsole.fOutput(
         COLOR_INFO, CHAR_INFO,
         COLOR_NORMAL, " Module search paths:",
@@ -105,10 +105,9 @@
           );
       # Dump exception stack like Python would
       import traceback;
-      asExceptionReportLines = traceback.format_exc();
-      for sLines in asExceptionReportLines:
-        for sLine in sLines.rstrip("\n"):
-          oConsole.fOutput(sLine);
+      asExceptionReportLines = traceback.format_exc().split("\n");
+      for sLine in asExceptionReportLines:
+        oConsole.fOutput(sLine.rstrip("\r");
       # Terminate with the appropriate exit code from mExitCodes (use standard values if it cannot be loaded).
       sys.exit(guExitCodeBadDependencyError if bModuleNotFound else guExitCodeInternalError);
     if bDebugOutput: oConsole.fOutput(
