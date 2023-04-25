@@ -107,7 +107,7 @@
       import traceback;
       asExceptionReportLines = traceback.format_exc().split("\n");
       for sLine in asExceptionReportLines:
-        oConsole.fOutput(sLine.rstrip("\r");
+        oConsole.fOutput(sLine.rstrip("\r"));
       # Terminate with the appropriate exit code from mExitCodes (use standard values if it cannot be loaded).
       sys.exit(guExitCodeBadDependencyError if bModuleNotFound else guExitCodeInternalError);
     if bDebugOutput: oConsole.fOutput(
